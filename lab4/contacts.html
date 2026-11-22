@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Переплёт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__title">Контакты</h1>
+            <p class="header__slogan">Мы всегда рады вас видеть</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="menu-link">Главная</a>
+        <a href="catalog.html" class="menu-link">Каталог</a>
+        <a href="about.html" class="menu-link">О нас</a>
+        <a href="contacts.html" class="menu-link menu-link--active">Контакты</a>
+    </nav>
+
+    <main class="main">
+        <h2 class="main__title">Адрес</h2>
+        <p>г. Санкт-Петербург, пр. Литейный, д. 57</p>
+
+        <h2 class="main__title">Телефон и почта</h2>
+        <p>Телефон: +7 (812) 555-33-22</p>
+        <p>Email: <a href="mailto:hello@pereplyot.ru">hello@pereplyot.ru</a></p>
+
+        <h2 class="main__title">Режим работы</h2>
+        <ul>
+            <li>Пн–Пт: с 09:00 до 21:00</li>
+            <li>Сб–Вс: с 10:00 до 14:00</li>
+        </ul>
+
+        <h2 class="main__title">Оставить заявку</h2>
+
+        <form class="form" id="contact-form" novalidate>
+            <div class="form__row">
+                <label class="form__label" for="name">Ваше имя</label>
+                <input class="form__input" type="text" id="name" name="name"
+                       required minlength="2" placeholder="Иван Иванов">
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" name="email"
+                       required placeholder="you@example.com">
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="password">Пароль личного кабинета</label>
+                <input class="form__input" type="password" id="password" name="password"
+                       required minlength="6" placeholder="Минимум 6 символов">
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="genre">Любимый жанр</label>
+                <select class="form__select" id="genre" name="genre" required>
+                    <option value="" disabled selected>— выберите —</option>
+                    <option value="Фэнтези">Фэнтези</option>
+                    <option value="Триллер">Триллер</option>
+                    <option value="Классика">Классика</option>
+                    <option value="Детская литература">Детская литература</option>
+                    <option value="Научпоп">Научпоп</option>
+                </select>
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="message">Сообщение</label>
+                <textarea class="form__textarea" id="message" name="message"
+                          placeholder="Ваш вопрос или пожелание..."></textarea>
+            </div>
+
+            <label class="form__checkbox">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span>Согласен на обработку персональных данных</span>
+            </label>
+
+            <button class="form__button" type="submit">Отправить</button>
+            <p class="form__status" id="form-status" role="status"></p>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Книжный магазин "Переплёт". Все права защищены.</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
